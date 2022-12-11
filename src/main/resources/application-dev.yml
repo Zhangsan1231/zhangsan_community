@@ -1,0 +1,30 @@
+
+server:
+  port: 8000
+
+web:
+  domain: http://39.101.64.252
+#  domain: http://localhost
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://39.101.64.252:3306/community?usUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=GMT%2B8
+    type: com.zaxxer.hikari.HikariDataSource
+    #Swagger配置
+    #升级springboot到2.6之后，需要设置spring.mvc.pathmatch.matching-strategy=ant-path-matcher来兼容Swagger2
+    #我们采用的springboot2.7.4
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+#显示sql日志
+logging:
+  level:
+    root: info
+    com.zhang: debug
+
+

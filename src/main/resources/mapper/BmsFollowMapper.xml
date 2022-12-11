@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhang.mapper.BmsFollowMapper">
+    <select id="getFollowCount" resultType="int">
+        select count(1) from bms_follow where parent_id= #{parent_id}
+    </select>
+
+</mapper>
